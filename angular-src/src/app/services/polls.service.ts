@@ -25,7 +25,7 @@ export class PollsService {
       )
   }
   getPolls(): Observable<any> { //get  all polls from db
-  return this.http.get("/").map(
+  return this.http.get("home").map(
       res =>{
     return  res.json();
       }

@@ -1230,7 +1230,7 @@ var PollsService = (function () {
         });
     };
     PollsService.prototype.getPolls = function () {
-        return this.http.get("/").map(function (res) {
+        return this.http.get("home").map(function (res) {
             return res.json();
         });
     };

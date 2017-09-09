@@ -6,7 +6,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 
 // get all polls
-router.get('/', (req, res, next)=>{
+router.get('/home', (req, res, next)=>{
   Poll.find({}, (err, data)=>{
     if(err) res.send(err);
     res.send(data);
