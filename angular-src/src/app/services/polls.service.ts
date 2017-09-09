@@ -25,7 +25,7 @@ export class PollsService {
       )
   }
   getPolls(): Observable<any> { //get  all polls from db
-  return this.http.get("").map(
+  return this.http.get("/").map(
       res =>{
     return  res.json();
       }
@@ -54,7 +54,7 @@ export class PollsService {
     let headers = new Headers();
     headers.append('Authorization', localStorage.getItem('id_token'));
     headers.append('Content-Type', 'application/json');
-    return this.http.post("", body,{headers: headers}).map(
+    return this.http.post("/", body,{headers: headers}).map(
       res =>{
       return res.json()
      }

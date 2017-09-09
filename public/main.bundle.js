@@ -1230,7 +1230,7 @@ var PollsService = (function () {
         });
     };
     PollsService.prototype.getPolls = function () {
-        return this.http.get("").map(function (res) {
+        return this.http.get("/").map(function (res) {
             return res.json();
         });
     };
@@ -1255,7 +1255,7 @@ var PollsService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Authorization', localStorage.getItem('id_token'));
         headers.append('Content-Type', 'application/json');
-        return this.http.post("", body, { headers: headers }).map(function (res) {
+        return this.http.post("/", body, { headers: headers }).map(function (res) {
             return res.json();
         });
     };
