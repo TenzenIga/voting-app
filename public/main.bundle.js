@@ -161,7 +161,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_22__components_new_poll_option_new_poll_option_component__["a" /* NewPollOptionComponent */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forRoot(appRoutes),
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { useHash: true }),
             __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesModule"],
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* FormsModule */],

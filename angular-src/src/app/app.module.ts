@@ -12,6 +12,7 @@ import {MdIconModule} from '@angular/material';
 import {MdListModule} from '@angular/material';
 import {MdCardModule} from '@angular/material';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import {HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -53,7 +54,7 @@ const appRoutes: Routes = [
     NewPollOptionComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {useHash: true}),
     FlashMessagesModule,
     BrowserModule,
     FormsModule,
