@@ -1,0 +1,19 @@
+
+<div class="row">
+<div class="col-lg-3 col-md-4 col-ls-4 col-xs-4" *ngIf='poll'>
+<h2> {{poll.name}}</h2>
+  <div *ngFor="let option of poll.options">
+    <button md-raised-button (click)='onVote(this.option)'>{{option.optionName}}</button>
+  </div>
+  <a *ngIf="authService.loggedIn()" (click)="showHide = !showHide">Add new option</a>
+<form  *ngIf="showHide" class="example-form" (submit) ="onOptionSubmit()">
+  <md-form-field  class="example-full-width">
+    <input type="text" [(ngModel)]="optionName" name="optionName" mdInput placeholder="option" [formControl] = "optionNameFormControl">
+  </md-form-field>
+   <button md-raised-button type="submit" [disabled]="!optionNameFormControl.valid">Add</button >
+</form>
+</div>
+<div class="col-lg-9 col-md-8 col-ls-8 col-xs-8">
+<google-chart  [data]="pieChartData"></google-chart>
+</div>
+</div>

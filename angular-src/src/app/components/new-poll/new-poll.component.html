@@ -1,0 +1,28 @@
+<h1 class="page-header">New Poll</h1>
+   <form [formGroup]="myForm" class="example-form" novalidate (ngSubmit)="save(myForm)">
+       <!-- we will place our fields here -->
+
+         <md-form-field class="example-full-width">
+
+         <input type="text" mdInput placeholder="title" formControlName="name">
+        <!--display error message if name is not valid-->
+        </md-form-field>
+       <div formArrayName="options">
+         <div *ngFor="let option of myForm.controls.options.controls; let i=index">
+
+
+<div [formGroupName]="i">
+        <!--replace address implementation with our new address component-->
+        <app-new-poll-option [group]="myForm.controls.options.controls[i]"></app-new-poll-option>
+        <md-icon *ngIf="myForm.controls.options.controls.length > 2" (click)="removeOption(i)">delete</md-icon>
+
+       </div>
+     </div>
+   </div>
+   <div>
+          <a (click)="addOption()" style="cursor: default">
+            Add another option +
+          </a>
+        </div>
+       <button md-raised-button type="submit" [disabled]="!myForm.valid">Submit</button >
+   </form>

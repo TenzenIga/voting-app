@@ -1,0 +1,12 @@
+<h2 class="page-header"></h2>
+
+
+<form class="example-form" (submit) = "onLoginSubmit()">
+  <md-form-field class="example-full-width">
+    <input mdInput [(ngModel)]="username" name="username" placeholder="username" [formControl] = "usernameFormControl">
+  </md-form-field>
+  <md-form-field class="example-full-width">
+    <input type="password" [(ngModel)]="password" name="password" mdInput placeholder="password" >
+  </md-form-field>
+  <button type="submit" md-raised-button>Login</button>
+</form>

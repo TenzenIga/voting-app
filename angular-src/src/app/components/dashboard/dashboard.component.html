@@ -1,0 +1,16 @@
+<h2 class="page-header">Dashboard</h2>
+<p>Here you can find all your polls or create <a (click)="newPoll()" style="cursor: default"> new </a></p>
+
+
+<div *ngIf="polls" >
+<md-card class="example-card" *ngFor="let poll of polls">
+  <md-card-header>
+    <md-card-title >{{poll.name}}</md-card-title>
+  </md-card-header>
+  <md-card-actions>
+    <button md-button (click)="showPollDetail(poll)">VIEW</button>
+    <button md-button (click)="removePoll(poll._id); $event.stopPropagation()" >REMOVE</button>
+    <button md-button (click)="twitterShare(poll)">SHARE</button>
+  </md-card-actions>
+</md-card>
+</div>

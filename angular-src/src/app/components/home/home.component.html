@@ -1,0 +1,9 @@
+<div class="jumbotron text-center">
+  <h1>Voting App</h1>
+  <p class="lead"> Welcome to custom Mean stack Voting application built from scratch</p>
+</div>
+<div *ngIf="polls">
+  <div *ngFor="let poll of polls" class="list-group">
+   <a (click)="showPollDetail(poll)" class="list-group-item">{{poll.name}}</a>
+  </div>
+</div>
