@@ -330,7 +330,7 @@ var HomeComponent = (function () {
         });
     };
     HomeComponent.prototype.showPollDetail = function (poll) {
-        this.router.navigate(['polls', poll._id]);
+        this.router.navigate(['pollspage', poll._id]);
     };
     return HomeComponent;
 }());
