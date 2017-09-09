@@ -255,7 +255,7 @@ var DashboardComponent = (function () {
         this.router.navigate(['newpoll']);
     };
     DashboardComponent.prototype.twitterShare = function (poll) {
-        window.open('https://twitter.com/intent/tweet?text=' + poll.name + " https://meanvoting-app.herokuapp.com/polls/" + poll._id, '_blank');
+        window.open('https://twitter.com/intent/tweet?text=' + poll.name + " https://meanvoting-app.herokuapp.com/#/polls/" + poll._id, '_blank');
     };
     return DashboardComponent;
 }());
