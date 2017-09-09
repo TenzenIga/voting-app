@@ -34,7 +34,7 @@ const appRoutes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'polls/:pollId', component:PollComponent},
+  {path:'pollspage/:pollId', component:PollComponent},
   {path:'newpoll', component:NewPollComponent, canActivate:[AuthGuard]}
 ];
 

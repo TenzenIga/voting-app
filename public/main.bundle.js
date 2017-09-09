@@ -138,7 +138,7 @@ var appRoutes = [
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_12__components_login_login_component__["a" /* LoginComponent */] },
     { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_15__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_6__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_16__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_6__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'polls/:pollId', component: __WEBPACK_IMPORTED_MODULE_20__components_poll_poll_component__["a" /* PollComponent */] },
+    { path: 'pollspage/:pollId', component: __WEBPACK_IMPORTED_MODULE_20__components_poll_poll_component__["a" /* PollComponent */] },
     { path: 'newpoll', component: __WEBPACK_IMPORTED_MODULE_21__components_new_poll_new_poll_component__["a" /* NewPollComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_6__guards_auth_guard__["a" /* AuthGuard */]] }
 ];
 var AppModule = (function () {
