@@ -19,6 +19,6 @@ export class HomeComponent implements OnInit {
     );
   }
   showPollDetail(poll){
-    this.router.navigate(['pollspage', poll._id]);
+    this.router.navigate(['polls', poll._id]);
   }
 }
