@@ -36,7 +36,7 @@ export class PollsService {
     let headers = new Headers();
       headers.append('Authorization', localStorage.getItem('id_token'));
     headers.append('Content-Type', 'application/json');
-    let ur = id;
+    let ur = "polls/" + id;
     return this.http.delete(ur,{headers: headers}).map(
       res =>{ res.json()
     })

@@ -1239,7 +1239,7 @@ var PollsService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Authorization', localStorage.getItem('id_token'));
         headers.append('Content-Type', 'application/json');
-        var ur = id;
+        var ur = "polls/" + id;
         return this.http.delete(ur, { headers: headers }).map(function (res) {
             res.json();
         });
