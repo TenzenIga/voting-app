@@ -25,7 +25,7 @@ export class PollsService {
       )
   }
   getPolls(): Observable<any> { //get  all polls from db
-  return this.http.get("/").map(
+  return this.http.get("https://meanvoting-app.herokuapp.com").map(
       res =>{
     return  res.json();
       }
@@ -36,7 +36,7 @@ export class PollsService {
     let headers = new Headers();
       headers.append('Authorization', localStorage.getItem('id_token'));
     headers.append('Content-Type', 'application/json');
-    let ur = "/" + id;
+    let ur = "https://meanvoting-app.herokuapp.com/" + id;
     return this.http.delete(ur,{headers: headers}).map(
       res =>{ res.json()
     })
@@ -44,7 +44,7 @@ export class PollsService {
   addVoteToPoll(body, id) { //upgrade poll
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    let ur = "polls/" + id;
+    let ur = "https://meanvoting-app.herokuapp.com/polls/" + id;
     return this.http.put(ur, body, headers).map(
         res => res.json()
         )
@@ -54,7 +54,7 @@ export class PollsService {
     let headers = new Headers();
     headers.append('Authorization', localStorage.getItem('id_token'));
     headers.append('Content-Type', 'application/json');
-    return this.http.post("", body,{headers: headers}).map(
+    return this.http.post("https://meanvoting-app.herokuapp.com", body,{headers: headers}).map(
       res =>{
       return res.json()
      }
@@ -64,7 +64,7 @@ export class PollsService {
       let headers = new Headers();
       headers.append('Authorization', localStorage.getItem('id_token'));
       headers.append('Content-Type', 'application/json');
-      return this.http.put("" + id, body,{headers: headers}).map(
+      return this.http.put("https://meanvoting-app.herokuapp.com/" + id, body,{headers: headers}).map(
           res => res.json()
           )
     }
