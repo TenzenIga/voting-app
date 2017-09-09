@@ -19,5 +19,5 @@
   <md-form-field class="example-full-width">
     <input type="password" [(ngModel)]="password" name="password" mdInput placeholder="password" >
   </md-form-field>
-  <button type="submit" md-raised-button>Submit</button>
+  <button type="submit" [disabled]="!emailFormControl.valid" md-raised-button>Submit</button>
 </form>

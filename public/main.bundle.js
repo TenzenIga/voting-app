@@ -255,7 +255,7 @@ var DashboardComponent = (function () {
         this.router.navigate(['newpoll']);
     };
     DashboardComponent.prototype.twitterShare = function (poll) {
-        window.open('https://twitter.com/intent/tweet?text=' + poll.name + " http://localhost:4200/polls/" + poll._id, '_blank');
+        window.open('https://twitter.com/intent/tweet?text=' + poll.name + " https://meanvoting-app.herokuapp.com/polls/" + poll._id, '_blank');
     };
     return DashboardComponent;
 }());
@@ -971,7 +971,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Register</h2>\n\n<form class=\"example-form\" (submit) = \"onRegisterSubmit()\">\n  <md-form-field class=\"example-full-width\">\n    <input mdInput [(ngModel)]=\"name\" name=\"name\" placeholder=\"name\" [formControl] = \"nameFormControl\">\n  </md-form-field>\n  <md-form-field class=\"example-full-width\">\n    <input mdInput [(ngModel)]=\"username\" name=\"username\" placeholder=\"username\" [formControl] = \"usernameFormControl\">\n  </md-form-field>\n  <md-form-field class=\"example-full-width\">\n    <input mdInput [(ngModel)]=\"email\" name=\"email\" placeholder=\"Email\" [formControl]=\"emailFormControl\">\n    <md-error *ngIf=\"emailFormControl.hasError('pattern')\">\n      Please enter a valid email address\n    </md-error>\n    <md-error *ngIf=\"emailFormControl.hasError('required')\">\n      Email is <strong>required</strong>\n    </md-error>\n  </md-form-field>\n  <md-form-field class=\"example-full-width\">\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" mdInput placeholder=\"password\" >\n  </md-form-field>\n  <button type=\"submit\" md-raised-button>Submit</button>\n</form>\n"
+module.exports = "<h2 class=\"page-header\">Register</h2>\n\n<form class=\"example-form\" (submit) = \"onRegisterSubmit()\">\n  <md-form-field class=\"example-full-width\">\n    <input mdInput [(ngModel)]=\"name\" name=\"name\" placeholder=\"name\" [formControl] = \"nameFormControl\">\n  </md-form-field>\n  <md-form-field class=\"example-full-width\">\n    <input mdInput [(ngModel)]=\"username\" name=\"username\" placeholder=\"username\" [formControl] = \"usernameFormControl\">\n  </md-form-field>\n  <md-form-field class=\"example-full-width\">\n    <input mdInput [(ngModel)]=\"email\" name=\"email\" placeholder=\"Email\" [formControl]=\"emailFormControl\">\n    <md-error *ngIf=\"emailFormControl.hasError('pattern')\">\n      Please enter a valid email address\n    </md-error>\n    <md-error *ngIf=\"emailFormControl.hasError('required')\">\n      Email is <strong>required</strong>\n    </md-error>\n  </md-form-field>\n  <md-form-field class=\"example-full-width\">\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" mdInput placeholder=\"password\" >\n  </md-form-field>\n  <button type=\"submit\" [disabled]=\"!emailFormControl.valid\" md-raised-button>Submit</button>\n</form>\n"
 
 /***/ }),
 

@@ -39,6 +39,6 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['newpoll']);
   }
   twitterShare(poll){
-    window.open('https://twitter.com/intent/tweet?text=' + poll.name + " http://localhost:4200/polls/" +poll._id, '_blank')
+    window.open('https://twitter.com/intent/tweet?text=' + poll.name + " https://meanvoting-app.herokuapp.com/polls/" +poll._id, '_blank')
   }
 }
