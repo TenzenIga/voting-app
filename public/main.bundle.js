@@ -726,7 +726,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "button{\r\n  margin: 10px;\r\n}\r\n", ""]);
+exports.push([module.i, "button{\r\n  margin: 10px;\r\n}\r\n.chart{\r\n  width: 100%;\r\n  min-height: 450px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -739,7 +739,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/poll/poll.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"row\">\n<div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-4\" *ngIf='poll'>\n<h2> {{poll.name}}</h2>\n  <div *ngFor=\"let option of poll.options\">\n    <button md-raised-button (click)='onVote(this.option)'>{{option.optionName}}</button>\n  </div>\n  <a *ngIf=\"authService.loggedIn()\" (click)=\"showHide = !showHide\">Add new option</a>\n<form  *ngIf=\"showHide\" class=\"example-form\" (submit) =\"onOptionSubmit()\">\n  <md-form-field  class=\"example-full-width\">\n    <input type=\"text\" [(ngModel)]=\"optionName\" name=\"optionName\" mdInput placeholder=\"option\" [formControl] = \"optionNameFormControl\">\n  </md-form-field>\n   <button md-raised-button type=\"submit\" [disabled]=\"!optionNameFormControl.valid\">Add</button >\n</form>\n</div>\n<div class=\"col-lg-9 col-md-8 col-sm-8 col-xs-8\">\n<google-chart  [data]=\"pieChartData\"></google-chart>\n</div>\n</div>\n"
+module.exports = "\n<div class=\"row\">\n<div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-4\" *ngIf='poll'>\n<h2> {{poll.name}}</h2>\n  <div *ngFor=\"let option of poll.options\">\n    <button md-raised-button (click)='onVote(this.option)'>{{option.optionName}}</button>\n  </div>\n  <a *ngIf=\"authService.loggedIn()\" (click)=\"showHide = !showHide\">Add new option</a>\n<form  *ngIf=\"showHide\" class=\"example-form\" (submit) =\"onOptionSubmit()\">\n  <md-form-field  class=\"example-full-width\">\n    <input type=\"text\" [(ngModel)]=\"optionName\" name=\"optionName\" mdInput placeholder=\"option\" [formControl] = \"optionNameFormControl\">\n  </md-form-field>\n   <button md-raised-button type=\"submit\" [disabled]=\"!optionNameFormControl.valid\">Add</button >\n</form>\n</div>\n<div class=\"col-lg-9 col-md-8 col-sm-8 col-xs-8\">\n<google-chart  class=\"chart\" [data]=\"pieChartData\"></google-chart>\n</div>\n</div>\n"
 
 /***/ }),
 
